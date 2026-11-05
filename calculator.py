@@ -19,6 +19,7 @@ def multiply(a, b):
 def divide(a , b):
     if a == 0:
         raise ZeroDivisionError("Cannot divide by 0.")
+    return b / a
 
 def logarithm(a, b):
     if b == 1:
@@ -27,6 +28,7 @@ def logarithm(a, b):
         raise ValueError("Base must be greater than 0.")
     if a <= 0:
         raise ValueError("X must be greater than 0")
+    return math.log(a, b)
 
 def exponent(a, b):
     return a**b
