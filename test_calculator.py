@@ -34,8 +34,29 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             square_root(-1)
 
-    # Partner 2 tests go here after pulling into labpartner2.
+    # Partner 2
+    def test_add(self):
+        self.assertEqual(add(2, 3), 5)
+        self.assertEqual(add(-2, 5), 3)
+        self.assertEqual(add(0, 0), 0)
 
+    def test_subtract(self):
+        self.assertEqual(subtract(10, 4), 6)
+        self.assertEqual(subtract(4, 10), -6)
+        self.assertEqual(subtract(-3, -3), 0)
+
+    def test_divide_by_zero(self):
+        with self.assertRaises(ZeroDivisionError):
+            div(0, 5)
+
+    def test_logarithm(self):
+        self.assertAlmostEqual(logarithm(8, 2), 3)
+        self.assertAlmostEqual(logarithm(1, 10), 0)
+        self.assertAlmostEqual(logarithm(100, 10), 2)
+
+    def test_log_invalid_base(self):
+        with self.assertRaises(ValueError):
+            logarithm(5, 1)
 
 # Do not touch this
 if __name__ == "__main__":
