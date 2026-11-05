@@ -1,5 +1,9 @@
 import math
 
+# https://github.com/zaaaacch/lab11-ZB-CH
+# Partner 1: Zach Beattie
+# Partner 2: Cooper Hayes
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
@@ -7,7 +11,6 @@ calculator.py
 One function per operation, in order.
 """
 
-# https://github.com/zaaaacch/lab10-ZB-CH
 
 def square_root(a):
     try:
